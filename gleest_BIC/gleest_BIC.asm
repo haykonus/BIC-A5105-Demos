@@ -200,7 +200,7 @@ lo      function x, x&255
                                 
                                 pop     de              
                    
-                                ld      (hl),a          ; BWS-Byte merken
+                                ld      (hl),a          ; Bitpos u. Farbindex merken
                                 dec     hl
                                   
                                 ld      (hl),d          ; BWS hi merken
@@ -384,9 +384,7 @@ gdcSetPixel:
 
         push    hl
         push    af
-        
-        ld      (hl), a 
-        
+              
         ld      b, a                    
         and     00000011b
         ld      c, a                    ; C = Bitpos(2Bit)
@@ -451,9 +449,7 @@ gdcSetPixel:
 ;-----------------------------------------------------------------------------
 
 gdcResPixel:
-
-        ld      (hl), a 
-        
+     
         ld      b, a                                            
         and     00000011b
         ld      c, a                    ; C = Bitpos(2Bit)
@@ -461,7 +457,7 @@ gdcResPixel:
         srl     b
 
         ld      a, h
-        cp      a, hi(dummy)            ; Fake-VRAM-Adr ?
+        cp      a, hi(dummy)            ; Dummy-BWS-Adr ?
         ret     z                       ; skipRes
         
         ld      a, 49h                  ; CURS
@@ -533,7 +529,7 @@ fb1:    ld      (hl), e         ; Dummy-BWS hi
         inc     hl
         ld      (hl), d         ; Dummy-BWS lo
         inc     hl
-        ld      (hl), 00h       ; Dummy-Pixel
+        ld      (hl), 00h       ; Dummy Bitpos u. Farbindex
         inc     hl
         
         dec     bc
