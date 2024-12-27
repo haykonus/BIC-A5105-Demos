@@ -40,6 +40,13 @@ im BIC oder JKCEMU als Audio-File laden und starten mit:
 bload"cas:gleest",r
 ```
 
+- [gleest.rmc](https://github.com/haykonus/BIC-A5105-Demos/blob/main/gleest_BIC/gleest.rmc)
+im BIC oder JKCEMU über Diskette laden und starten mit:
+
+```
+bload"gleest.rmc",r
+```
+
 ## Quellen
 
 Dieses Projekt nutzt Infos und Software aus den u.g. Quellen. 
