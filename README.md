@@ -37,7 +37,7 @@ defusr0=&H8100:x=usr0(0)
 im BIC oder JKCEMU als Audio-File laden und starten mit:
 
 ```
-bload"gleest",r
+bload"cas:gleest",r
 ```
 
 ## Quellen
