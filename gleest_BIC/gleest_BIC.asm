@@ -367,7 +367,8 @@ setPixel:
         rlc     b               ; B = Farbindex(3Bit) 2x links
         rlc     b
         or      b               ; A = Bitpos | Farbindex
-        and     00011111b       
+        and     00011111b  
+	rlc	a	
         call    gdcSetPixel
         ret
 
@@ -398,7 +399,7 @@ gdcSetPixel:
         
         ld      h, hi(pixtab)	
 	ld	l, b
-	rlc	l
+	;rlc	l
 	
         ;---
         
@@ -454,7 +455,7 @@ gdcResPixel:
         
         ld      h, hi(pixtab)	
 	ld	l, b
-	rlc	l	
+	;rlc	l	
 	
         ;---
         
