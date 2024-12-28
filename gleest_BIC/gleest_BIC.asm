@@ -45,7 +45,7 @@ lo      function x, x&255
         
                 loop:   
                         ld      bc,3F03h        ; BH = 3F -> max. 64 Punkte / 192-Byte-Block
-                                                ; BL = 04 -> HL auf Anfang von nächstem 
+                                                ; BL = 03 -> HL auf Anfang von nächstem 
                                                 ;            192-Byte-Block setzen
                         d_loop:
                                 ;
@@ -385,12 +385,8 @@ gdcSetPixel:
         push    hl
         push    af
               
-        ld      b, a                    
-        and     00000011b
-        ld      c, a                    ; C = Bitpos(2Bit)
-        srl     b                       ; B = Farbindex(3Bit) 2x rechts
-        srl     b
-
+        ld      b, a 
+	
         ld      a, 49h                  ; CURS
         out     (GDC_CMD_RW), a
         ld      a, l                    ; EAD l 
@@ -400,19 +396,10 @@ gdcSetPixel:
 
         ;---
         
-        ld      h, hi(pixtab)
-        
-        ld      l, c                    ; Bitpos
-        rlc     l                       ; Bitpos*2
-        
-        ld      a, b                    ; Farbindex
-        rlc     a                       ; Farbindex*8
-        rlc     a
-        rlc     a
-        
-        add     a, l
-        ld      l, a
-
+        ld      h, hi(pixtab)	
+	ld	l, b
+	rlc	l
+	
         ;---
         
         ld      a, 4Ah                  ; MASK
@@ -450,12 +437,8 @@ gdcSetPixel:
 
 gdcResPixel:
      
-        ld      b, a                                            
-        and     00000011b
-        ld      c, a                    ; C = Bitpos(2Bit)
-        srl     b                       ; B = Farbindex(3Bit) 2x rechts
-        srl     b
-
+        ld      b, a    
+	
         ld      a, h
         cp      a, hi(dummy)            ; Dummy-BWS-Adr ?
         ret     z                       ; skipRes
@@ -469,19 +452,10 @@ gdcResPixel:
 
         ;---
         
-        ld      h, hi(pixtab)
-        
-        ld      l, c                    ; Bitpos
-        rlc     l                       ; Bitpos*2
-                
-        ld      a, b                    ; Farbindex
-        rlc     a                       ; Farbindex*8
-        rlc     a
-        rlc     a
-        
-        add     a, l
-        ld      l, a
-
+        ld      h, hi(pixtab)	
+	ld	l, b
+	rlc	l	
+	
         ;---
         
         ld      a, 4Ah                  ; MASK
