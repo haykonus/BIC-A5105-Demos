@@ -5,6 +5,8 @@
 
 # GleEst für BIC-A5105
 
+<br>
+
 ![Demo](https://github.com/haykonus/BIC-A5105-Demos/blob/main/gleest_BIC/Bilder/gleest_BIC.gif)
 
 Dieses Programm für den [BIC-A5105](https://www.robotrontechnik.de/index.htm?/html/computer/a5105.htm) basiert auf [GleEst](https://zxart.ee/eng/software/demoscene/intro/256b-intro/gleest/) für den ZX-Spectrum 128, programmiert von Oleg Senin (bfox, St.Petersburg, Russia). Seine 256 Byte-Demo enthält im Original eine Sound-Ausgabe über den AY-3-8912 und setzt die Farb-Attribute des ZX-Spectrum. Der Algorithmus wurde extrahiert, leicht modifiziert (RAM-Speicherbedarf optimiert) und der Grafik-Effekt, inkl. Farben, an den BIC-A5105 angepasst. Dafür wurde der 320x200 Pixel-Mode mit 16 Farben/Pixel gewählt. 
@@ -16,12 +18,12 @@ Zum Assemblieren wurde der [Arnold-Assembler](http://john.ccac.rwth-aachen.de:80
 > [!TIP]
 > Das Programm kann mit Drücken (2 mal) der STOP-Taste beendet werden.
 
-### Vorausetzungen
+## Vorausetzungen
 
 - BIC-A5105
 - oder [JKCEMU](http://www.jens-mueller.org/jkcemu/index.html)
 
-### Schnellstart
+## Schnellstart
 
 > [!CAUTION]
 > Die Links unten anklicken und danach den Download-Button (Download raw file) im Github klicken, um die Datei zu laden.
