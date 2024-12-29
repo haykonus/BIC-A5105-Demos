@@ -399,7 +399,6 @@ gdcSetPixel:
         
         ld      h, hi(pixtab)	
 	ld	l, b
-	;rlc	l
 	
         ;---
         
@@ -455,7 +454,6 @@ gdcResPixel:
         
         ld      h, hi(pixtab)	
 	ld	l, b
-	;rlc	l	
 	
         ;---
         
