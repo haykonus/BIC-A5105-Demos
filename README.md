@@ -3,10 +3,9 @@
 
 [GleEst für BIC-A5105](https://github.com/haykonus/BIC-A5105-Demos?tab=readme-ov-file#gleest-f%C3%BCr-bic-a5105)
 
-# GleEst für BIC-A5105
+<br>
 
-<br>
-<br>
+# GleEst für BIC-A5105
 
 ![Demo](https://github.com/haykonus/BIC-A5105-Demos/blob/main/gleest_BIC/Bilder/gleest_BIC.gif)
 
