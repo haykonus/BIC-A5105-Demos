@@ -18,7 +18,7 @@ Zum Assemblieren wurde der [Arnold-Assembler](http://john.ccac.rwth-aachen.de:80
 > [!TIP]
 > Das Programm kann mit Drücken (2 mal) der STOP-Taste beendet werden.
 
-## Vorausetzungen
+## Voraussetzungen
 
 - BIC-A5105
 - oder [JKCEMU](http://www.jens-mueller.org/jkcemu/index.html)
